@@ -51,12 +51,18 @@ img {
 }
 
 .c-vertical {
-  font-size: 0.8rem;
+  font-size: clamp(10px, 2.3vw, 1rem);
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   letter-spacing: 3px;
-  line-height: 1.1rem;
+  line-height: 3.5vw;
+}
+
+@media screen and (min-width: 1025px) {
+  .c-vertical {
+    line-height: 1.5rem;
+  }
 }
 
 .c-subtitle {
@@ -460,58 +466,96 @@ img {
 @media screen and (min-width: 1025px) {
   .p-header {
     background-color: #fff;
+    padding: 20px 60px 10px;
   }
 }
 
 .p-top {
   background-color: #fff;
+  position: relative;
 }
 
 .p-top__hero {
   position: relative;
-  padding-bottom: 20px;
+  white-space: nowrap;
 }
 
 .p-top__hero__text {
   position: absolute;
 }
 
+.p-top__hero p:nth-child(2) {
+  position: absolute;
+  top: 1.5rem;
+  right: 7%;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-top__hero p:nth-child(2) {
+    color: #fff;
+    top: 3rem;
+    right: 75%;
+  }
+}
+
 .p-top__hero p:nth-child(3) {
-  top: 2%;
-  right: 5%;
+  top: 2.5rem;
+  right: 23%;
 }
 
 @media screen and (min-width: 1025px) {
   .p-top__hero p:nth-child(3) {
     color: #fff;
-    top: 3%;
-    right: 75%;
-  }
-}
-
-.p-top__hero p:nth-child(4) {
-  top: 7%;
-  right: 25%;
-}
-
-@media screen and (min-width: 1025px) {
-  .p-top__hero p:nth-child(4) {
-    color: #fff;
-    top: 5%;
-    right: 85%;
+    top: 7rem;
+    right: 83%;
   }
 }
 
 .p-top__intro {
-  padding: 0 20px;
   background-color: #fff;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media screen and (min-width: 1025px) {
   .p-top__intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     margin: 0 auto;
-    width: 60%;
+    width: 100%;
+    padding: 0 60px;
+  }
+}
+
+.p-top__intro img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-top__intro img {
+    max-width: 50vw;
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
+  }
+}
+
+.p-top__intro__inner {
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-top__intro__inner {
+    -ms-flex-preferred-size: 50vw;
+        flex-basis: 50vw;
   }
 }
 

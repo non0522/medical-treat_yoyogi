@@ -3,5 +3,6 @@
     font-weight: bold;
     @include responsive(pc) {
         background-color: #fff;
+        padding: 20px 60px 10px;
     }
 }
