@@ -568,7 +568,7 @@ img {
             flex-direction: row;
     margin: 0 auto;
     width: 100%;
-    padding: 0 60px;
+    padding: 0 120px 100px;
   }
 }
 
@@ -579,9 +579,7 @@ img {
 
 @media screen and (min-width: 1025px) {
   .p-top__intro img {
-    max-width: 50vw;
-    -ms-flex-preferred-size: 100px;
-        flex-basis: 100px;
+    max-width: 50%;
   }
 }
 
@@ -591,6 +589,7 @@ img {
 
 @media screen and (min-width: 1025px) {
   .p-top__intro__inner {
+    max-width: 50%;
     -ms-flex-preferred-size: 50vw;
         flex-basis: 50vw;
   }
