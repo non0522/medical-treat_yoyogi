@@ -8,8 +8,9 @@
         position: relative;
         white-space: nowrap;
         // padding-bottom: 20px;
-
+        
         &__text {
+            z-index: 10;
             position: absolute;
         }
         p:nth-child(2) {

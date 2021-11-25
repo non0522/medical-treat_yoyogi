@@ -327,11 +327,21 @@ img {
 }
 
 .c-temp {
-  display: none;
+  opacity: 0;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 100;
+  position: absolute;
+  -webkit-animation: anime 6s 0s;
+          animation: anime 6s 0s;
 }
 
 @media screen and (min-width: 1025px) {
   .c-temp {
+    z-index: 0;
+    opacity: 1;
+    position: inherit;
     display: block;
     width: 90%;
     margin: 0 auto;
@@ -339,6 +349,32 @@ img {
     padding-bottom: 60px;
     -o-object-fit: cover;
        object-fit: cover;
+    -webkit-animation: anime 0s 0s;
+            animation: anime 0s 0s;
+  }
+}
+
+@-webkit-keyframes anime {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anime {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -481,6 +517,7 @@ img {
 }
 
 .p-top__hero__text {
+  z-index: 10;
   position: absolute;
 }
 

@@ -1,14 +1,42 @@
 .c-temp {
-    display: none;
+    // display: none;
+    opacity: 0;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 100;
+    position: absolute;
+    animation: anime 6s 0s ;
 
     @include responsive(pc) {
+        z-index: 0;
+        opacity: 1;
+        position: inherit;
         display: block;
         width: 90%;
         margin: 0 auto;
         height: calc( 100vh - 80px) ;
         padding-bottom: 60px;
         object-fit: cover;
+        animation: anime 0s 0s;
         
     }
 }
 
+@keyframes anime {
+    0% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 1;
+    }
+    // 50% {
+    //   opacity: 1;
+    // }
+    // 80% {
+    //   opacity: 0;
+    //   z-index: 9;
+    // }
+    100% {
+      opacity: 0;
+    }
+  }
