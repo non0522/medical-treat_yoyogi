@@ -1,1 +1,0 @@
-# medical-treat_yoyogi

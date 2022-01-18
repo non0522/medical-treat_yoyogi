@@ -1,11 +1,7 @@
 .c-vertical {
-    // font-size:max(3vw, 20px);
-    font-size:clamp(10px, 2.3vw, 1rem);
+    font-size: 0.8rem;
     writing-mode: vertical-rl;
     letter-spacing: 3px;
-    line-height: 3.5vw;
-    @include responsive(pc) {
-        line-height: 1.5rem;
-    }
+    line-height: 1.1rem;
 
 }

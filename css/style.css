@@ -25,8 +25,8 @@ img {
 }
 
 .l-container {
-  background-image: url(https://github.com/non0522/medical-treat_yoyogi/blob/main/img/index_background_leaf_1.png?raw=true);
-  background-color: rgba(255, 255, 255, 0.6);
+  background-image: url(/img/index_background_leaf_1.png);
+  background-color: rgba(255, 255, 255, 0.4);
   background-blend-mode: lighten;
 }
 
@@ -51,18 +51,12 @@ img {
 }
 
 .c-vertical {
-  font-size: clamp(10px, 2.3vw, 1rem);
+  font-size: 0.8rem;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   letter-spacing: 3px;
-  line-height: 3.5vw;
-}
-
-@media screen and (min-width: 1025px) {
-  .c-vertical {
-    line-height: 1.5rem;
-  }
+  line-height: 1.1rem;
 }
 
 .c-subtitle {
@@ -327,21 +321,11 @@ img {
 }
 
 .c-temp {
-  opacity: 0;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 100;
-  position: absolute;
-  -webkit-animation: anime 6s 0s;
-          animation: anime 6s 0s;
+  display: none;
 }
 
 @media screen and (min-width: 1025px) {
   .c-temp {
-    z-index: 0;
-    opacity: 1;
-    position: inherit;
     display: block;
     width: 90%;
     margin: 0 auto;
@@ -349,32 +333,6 @@ img {
     padding-bottom: 60px;
     -o-object-fit: cover;
        object-fit: cover;
-    -webkit-animation: anime 0s 0s;
-            animation: anime 0s 0s;
-  }
-}
-
-@-webkit-keyframes anime {
-  0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes anime {
-  0% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 
@@ -502,96 +460,58 @@ img {
 @media screen and (min-width: 1025px) {
   .p-header {
     background-color: #fff;
-    padding: 20px 60px 10px;
   }
 }
 
 .p-top {
   background-color: #fff;
-  position: relative;
 }
 
 .p-top__hero {
   position: relative;
-  white-space: nowrap;
+  padding-bottom: 20px;
 }
 
 .p-top__hero__text {
-  z-index: 10;
   position: absolute;
-}
-
-.p-top__hero p:nth-child(2) {
-  position: absolute;
-  top: 1.5rem;
-  right: 7%;
-}
-
-@media screen and (min-width: 1025px) {
-  .p-top__hero p:nth-child(2) {
-    color: #fff;
-    top: 3rem;
-    right: 75%;
-  }
 }
 
 .p-top__hero p:nth-child(3) {
-  top: 2.5rem;
-  right: 23%;
+  top: 2%;
+  right: 5%;
 }
 
 @media screen and (min-width: 1025px) {
   .p-top__hero p:nth-child(3) {
     color: #fff;
-    top: 7rem;
-    right: 83%;
+    top: 3%;
+    right: 75%;
+  }
+}
+
+.p-top__hero p:nth-child(4) {
+  top: 7%;
+  right: 25%;
+}
+
+@media screen and (min-width: 1025px) {
+  .p-top__hero p:nth-child(4) {
+    color: #fff;
+    top: 5%;
+    right: 85%;
   }
 }
 
 .p-top__intro {
+  padding: 0 20px;
   background-color: #fff;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 @media screen and (min-width: 1025px) {
   .p-top__intro {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     margin: 0 auto;
-    width: 100%;
-    padding: 0 120px 100px;
-  }
-}
-
-.p-top__intro img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-@media screen and (min-width: 1025px) {
-  .p-top__intro img {
-    max-width: 50%;
-  }
-}
-
-.p-top__intro__inner {
-  padding: 0 20px;
-}
-
-@media screen and (min-width: 1025px) {
-  .p-top__intro__inner {
-    max-width: 50%;
-    -ms-flex-preferred-size: 50vw;
-        flex-basis: 50vw;
+    width: 60%;
   }
 }
 

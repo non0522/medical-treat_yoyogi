@@ -1,64 +1,41 @@
 .p-top {
     background-color: #fff;
-    position: relative;
-    
     // width: 100%;
     // margin: 0 60px;
     &__hero {
         position: relative;
-        white-space: nowrap;
-        // padding-bottom: 20px;
-        
+        padding-bottom: 20px;
+
         &__text {
-            z-index: 10;
             position: absolute;
         }
-        p:nth-child(2) {
-            position: absolute;
-            top: 1.5rem;
-            right: 7%;
+        p:nth-child(3) {
+            top: 2%;
+            right: 5%;
             @include responsive(pc) {
                 color: #fff;
-                top: 3rem;
+                top: 3%;
                 right: 75%;
             }
         }
-        p:nth-child(3) {
-            top: 2.5rem;
-            right: 23%;
+        p:nth-child(4) {
+            top: 7%;
+            right: 25%;
             @include responsive(pc) {
                 color: #fff;
-                top: 7rem;
-                right: 83%;
+                top: 5%;
+                right: 85%;
             }
         }
     }
 
     &__intro {
-        // padding: 0 20px;
+        padding: 0 20px;
         background-color: #fff;
         text-align: center;
-        display: flex;
-        flex-direction: column;
         @include responsive(pc) {
-            flex-direction: row;
             margin: 0 auto;
-            width: 100%;
-            padding: 0 120px 100px;
-        }
-        img {
-            object-fit: cover;
-            @include responsive(pc) {
-                max-width: 50%;
-                // flex-basis: 100px;
-            }
-        }
-        &__inner {
-            padding: 0 20px;
-            @include responsive(pc) {
-                max-width: 50%;
-                flex-basis: 50vw;
-            }
+            width: 60%;
         }
 
         &__desc {
